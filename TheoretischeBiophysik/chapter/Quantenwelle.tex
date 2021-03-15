@@ -1,27 +1,32 @@
-\section{Quantenwelle $\psi$ (unser Zustand)}
+\section{statistische Quantenwelle $\psi$}
 
 zum Verständnis:
 \begin{enumerate}
-    \item ein $e^-$ hat in einemAtom keine Flugbahn. $\psi$ der $e^-$ sagt nur wie wahrscheinlich es ist,
+    \item $\psi$ ist unser Zustand/Eigenfunktion
+    \item die Wahrscheinlickeitsaussagen sind die Lösung der Schrödinger-Gleichung
+    \item ein $e^-$ hat in einem Atom keine Flugbahn. $\psi$ der $e^-$ sagt nur wie wahrscheinlich es ist,
     irgendwo ein $e^-$  anzutreffen, wenn man es experimentell misst
+    \item durch Messung \textit{kollabiert} $\psi$ zu einem Peak am gemessenen Wert 
+    \item \textbf{?} es gibt diskrete Energien aber kontinuierliche Orte 
 \end{enumerate}
 
-Drehimpulse:
+Bedingungen aus der Statistik:
 \begin{enumerate}
-    \item Bahndrehimpuls
-    \item Spin $s$: eine Art ewige Eigendrehung der Teilchen
+    \item Ein Teilchen wird repräsentiert durch eine Wellenfunktion $\psi(x,t)$
+    \item Mittelwert $\braket{f(x)}=\int_{-\infty}^{\infty} f(x)\rho(x) \,dx$
+    \item da $\int_{-\infty}^{\infty} \rho(x) \,dx=1$ muss $\psi$ normiert sein, damit 
+    das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist
+\end{enumerate}
+
+zeitunabhängige Schrödinger-Gleichung: $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
 \begin{enumerate}
-    \item Spin-Statistik-Theorem:
+    \item auch geschrieben als $\hat{H}\psi=E\psi$
+\end{enumerate}
+
+(allg.) zeitabhängige Schrödinger-Gleichung: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x,t\right)}{\partial x^{2}}+V\cdot\psi\left(x,t\right)$
 \begin{enumerate}
-    \item Fermionen (z.B. $e^-$): s=0.5  $\rightarrow$ $\psi$ ist antisymmetrisch
-    \begin{enumerate}
-        \item Fermionen sind „Einzelgänger“ d.h. sie können nicht am selben Ort sein
-    \end{enumerate}
-    \item Bosonen (z.B. Photonen): s=1 $\rightarrow$ $\psi$ ist symmetrisch 
-    \begin{enumerate}
-        \item Bosonen sind „Herdentiere“ (lieben Gleichschritt) d.h. z.B.  können sich unzählige
-        Photonen zusammentun und gemeinsam eine schwingende elektromagnetische Welle ausbilden 
-    \end{enumerate}
+    \item Separationsansatz: $\psi(x,t)=\varphi(x)\cdot f(t)$
+
 \end{enumerate}
-\end{enumerate}
-\end{enumerate}
+
+\newpage
