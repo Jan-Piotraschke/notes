@@ -2,20 +2,21 @@
 
 \subsection{zum Verständnis:}
 \begin{enumerate}
-    \item $\psi$ ist unser Zustand/Eigenfunktion des Teichens
     \item die Wahrscheinlickeitsaussagen sind die Lösung der Schrödinger-Gleichung (\ref{schroedinger})
-
     \item ein $e^-$ hat in einem Atom keine Flugbahn. $\psi$ der $e^-$ sagt nur wie wahrscheinlich es ist,
     irgendwo ein $e^-$  anzutreffen, wenn man es experimentell misst
     \item durch Messung \textit{kollabiert} $\psi$ zu einem Peak am gemessenen Wert 
+    \item es gilt die Heisenberg'sche Unschärferelation $\sigma_x\sigma_p\geq\frac{\hbar}{2}$ (siehe \ref{Varianz})
     \item \textbf{?} es gibt diskrete Energien aber kontinuierliche Orte 
 \end{enumerate}
 
 \subsection{Bedingungen aus der Statistik:}
 \begin{enumerate}
-    \item Mittelwert $\braket{f(x)}=\int_{-\infty}^{\infty} f(x)\rho(x) \,dx$
-    \item da $\int_{-\infty}^{\infty} \rho(x) \,dx=1$ muss $\psi$ normiert sein, damit 
+    \item allgemein: $\braket{\psi_m|\psi_n}=\int \psi_m^*\psi_n \,dr=\delta_{mn}$ mit Wahrscheinlichkeitsdichte $|\psi(r,t)|^2=\rho(r,t)$
+    \item da $\int_{-\infty}^{\infty} \rho(r) \,dr=1$ muss $\psi$ normiert sein, damit 
     das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist
+    \item Erwartungswert/Mittelwert $\bar{A}\equiv\braket{A}=\braket{\psi|\hat{A}\psi}$
+    \item Varianz $\sigma^2=\braket{A^2}-\braket{A}^2$ \label{Varianz}
 \end{enumerate}
 
 \subsection{Schrödinger-Gleichung:}\label{schroedinger}
@@ -26,23 +27,33 @@
         \item Separationsansatz: $\psi(x,t)=\varphi(x)\cdot f(t)$
     \end{enumerate}
 
+
     \item zeitunabhängige: $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
     \begin{enumerate}
         \item auch geschrieben als $\hat{H}\psi=E\psi$
-    \end{enumerate}
-
-    \item es gibt Modellsysteme für die Form des Potential:
-    \begin{enumerate}
-        \item harmonischer Oszillator:
+        \item es gibt Modellsysteme für die Form des Potentials $V$:
         \begin{enumerate}
-            \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
-            verringern/erhöhen die Energien in diskrete Schritte:
+            \item freies Teichen (d.h. $V=0$):
             \begin{enumerate}
-                \item die Lösungen davon sind die Hermite-Funktionen
+                \item $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}=E\psi\left(x\right)$
+                \item \textbf{?} (NOTE: gehört das nicht zur zeitabhängigen Schrödinger-Gleichung?) Teilchen ist eine ebene Welle ($\psi$ kann zum Zeitpunkt $t=0$ "lokalisiert" werden
+                und dort normiert werden)
+                \item die Geschwindigkeit ist durch die Gruppengeschwindigkeit $v_g=\frac{\hbar k}{m}=\frac{d}{dk}\omega$ und \underline{nicht}
+                durch die Phasengeschwindigkeit von $\psi$ gegeben
+                \item \textbf{Model vom unendlichen Potentialtopf anwendbar}  
+            \end{enumerate}
+            \item harmonischer Oszillator ($V=\frac{1}{2}m\omega^2x^2$):
+            \begin{enumerate}
+                \item $E_n=\hbar\omega(n+\frac{1}{2})$ mit $n=0,1,2,...$
+                \item $E\psi=\hbar\omega(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi$
+                \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
+                verringern/erhöhen die Energien in diskrete Schritte: \\ die Lösungen davon sind die Hermite-Funktionen
             \end{enumerate}
         \end{enumerate}
     \end{enumerate}
+
 \end{enumerate}
+
 
 
 \newpage
