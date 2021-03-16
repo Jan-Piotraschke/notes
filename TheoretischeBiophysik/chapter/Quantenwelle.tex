@@ -1,32 +1,48 @@
 \section{statistische Quantenwelle $\psi$}
 
-zum Verständnis:
+\subsection{zum Verständnis:}
 \begin{enumerate}
-    \item $\psi$ ist unser Zustand/Eigenfunktion
-    \item die Wahrscheinlickeitsaussagen sind die Lösung der Schrödinger-Gleichung
+    \item $\psi$ ist unser Zustand/Eigenfunktion des Teichens
+    \item die Wahrscheinlickeitsaussagen sind die Lösung der Schrödinger-Gleichung (\ref{schroedinger})
+
     \item ein $e^-$ hat in einem Atom keine Flugbahn. $\psi$ der $e^-$ sagt nur wie wahrscheinlich es ist,
     irgendwo ein $e^-$  anzutreffen, wenn man es experimentell misst
     \item durch Messung \textit{kollabiert} $\psi$ zu einem Peak am gemessenen Wert 
     \item \textbf{?} es gibt diskrete Energien aber kontinuierliche Orte 
 \end{enumerate}
 
-Bedingungen aus der Statistik:
+\subsection{Bedingungen aus der Statistik:}
 \begin{enumerate}
-    \item Ein Teilchen wird repräsentiert durch eine Wellenfunktion $\psi(x,t)$
     \item Mittelwert $\braket{f(x)}=\int_{-\infty}^{\infty} f(x)\rho(x) \,dx$
     \item da $\int_{-\infty}^{\infty} \rho(x) \,dx=1$ muss $\psi$ normiert sein, damit 
     das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist
 \end{enumerate}
 
-zeitunabhängige Schrödinger-Gleichung: $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
+\subsection{Schrödinger-Gleichung:}\label{schroedinger}
 \begin{enumerate}
-    \item auch geschrieben als $\hat{H}\psi=E\psi$
+    \item die Schrödinger-Gleichung hängt nur von zwei Funktionen ab: $\psi$ und Potential $V$
+    \item (allg.) zeitabhängige: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x,t\right)}{\partial x^{2}}+V\cdot\psi\left(x,t\right)$
+    \begin{enumerate}
+        \item Separationsansatz: $\psi(x,t)=\varphi(x)\cdot f(t)$
+    \end{enumerate}
+
+    \item zeitunabhängige: $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
+    \begin{enumerate}
+        \item auch geschrieben als $\hat{H}\psi=E\psi$
+    \end{enumerate}
+
+    \item es gibt Modellsysteme für die Form des Potential:
+    \begin{enumerate}
+        \item harmonischer Oszillator:
+        \begin{enumerate}
+            \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
+            verringern/erhöhen die Energien in diskrete Schritte:
+            \begin{enumerate}
+                \item die Lösungen davon sind die Hermite-Funktionen
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
 \end{enumerate}
 
-(allg.) zeitabhängige Schrödinger-Gleichung: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x,t\right)}{\partial x^{2}}+V\cdot\psi\left(x,t\right)$
-\begin{enumerate}
-    \item Separationsansatz: $\psi(x,t)=\varphi(x)\cdot f(t)$
-
-\end{enumerate}
 
 \newpage
