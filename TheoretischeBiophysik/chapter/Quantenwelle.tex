@@ -1,4 +1,4 @@
-\section{statistische Quantenwelle $\psi$}
+\section{Die statistische Quantenwelle $\psi$}
 
 \subsection{zum Verständnis:}
 \begin{enumerate}
@@ -12,17 +12,18 @@
 
 \subsection{Bedingungen aus der Statistik:}
 \begin{enumerate}
-    \item allgemein: $\braket{\psi_m|\psi_n}=\int \psi_m^*\psi_n \,dr=\delta_{mn}$ mit Wahrscheinlichkeitsdichte $|\psi(r,t)|^2=\rho(r,t)$
+    \item allgemein: $\braket{\psi_m|\psi_n}=\int \psi_m^*\psi_n \,dr=\int_{-\infty}^{\infty}\rho(r)\,dr=\delta_{mn}$ 
+    mit Wahrscheinlichkeitsdichte $\rho(r,t)=|\psi(r,t)|^2$
     \item da $\int_{-\infty}^{\infty} \rho(r) \,dr=1$ muss $\psi$ normiert sein, damit 
-    das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist
-    \item Erwartungswert/Mittelwert $\bar{A}\equiv\braket{A}=\braket{\psi|\hat{A}\psi}$
+    das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist \label{normiert}
+    \item Erwartungswert/Mittelwert $\bar{A}\equiv\braket{A}=\braket{\psi|\hat{A}\psi}=\int_{-\infty}^{\infty}\hat{A}\rho(r)\,dr$
     \item Varianz $\sigma^2=\braket{A^2}-\braket{A}^2$ \label{Varianz}
 \end{enumerate}
 
 \subsection{Schrödinger-Gleichung:}\label{schroedinger}
 \begin{enumerate}
     \item die Schrödinger-Gleichung hängt nur von zwei Funktionen ab: $\psi$ und Potential $V$
-    \item (allg.) zeitabhängige: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x,t\right)}{\partial x^{2}}+V\cdot\psi\left(x,t\right)$
+    \item (allg.) zeitabhängige: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x,t\right)}{\partial x^{2}}+V\cdot\psi\left(x,t\right)=\hat{H}\psi\left(x,t\right)$
     \begin{enumerate}
         \item Separationsansatz: $\psi(x,t)=\varphi(x)\cdot f(t)$
     \end{enumerate}
@@ -31,28 +32,32 @@
     \item zeitunabhängige: $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
     \begin{enumerate}
         \item auch geschrieben als $\hat{H}\psi=E\psi$
-        \item es gibt Modellsysteme für die Form des Potentials $V$:
-        \begin{enumerate}
-            \item freies Teichen (d.h. $V=0$):
-            \begin{enumerate}
-                \item $-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi\left(x\right)}{\partial x^{2}}=E\psi\left(x\right)$
-                \item \textbf{?} (NOTE: gehört das nicht zur zeitabhängigen Schrödinger-Gleichung?) Teilchen ist eine ebene Welle ($\psi$ kann zum Zeitpunkt $t=0$ "lokalisiert" werden
-                und dort normiert werden)
-                \item die Geschwindigkeit ist durch die Gruppengeschwindigkeit $v_g=\frac{\hbar k}{m}=\frac{d}{dk}\omega$ und \underline{nicht}
-                durch die Phasengeschwindigkeit von $\psi$ gegeben
-                \item \textbf{Model vom unendlichen Potentialtopf anwendbar}  
-            \end{enumerate}
-            \item harmonischer Oszillator ($V=\frac{1}{2}m\omega^2x^2$):
-            \begin{enumerate}
-                \item $E_n=\hbar\omega(n+\frac{1}{2})$ mit $n=0,1,2,...$
-                \item $E\psi=\hbar\omega(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi$
-                \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
-                verringern/erhöhen die Energien in diskrete Schritte: \\ die Lösungen davon sind die Hermite-Funktionen
-            \end{enumerate}
-        \end{enumerate}
     \end{enumerate}
-
 \end{enumerate}
+
+\subsection{Modellsysteme für die Form des Potentials $V$:}
+\begin{enumerate}
+    \item freies Teilchen (d.h. $V=0$):
+    \begin{enumerate}
+        \item zeitabhängiges Teilchen ist eine ebene Welle ($\psi$ kann zum Zeitpunkt $t=0$ 'lokalisiert'  
+        und dort \textbf{normiert} werden) \\
+        $\rightarrow$ $\psi =Ae^{i(kx-\omega t)}$ mit $\omega=\frac{E}{\hbar}$
+        \item die Geschwindigkeit ist durch die Gruppengeschwindigkeit $v_g=\frac{\hbar k}{m}=\frac{d}{dk}\omega$ und \underline{nicht}
+        durch die Phasengeschwindigkeit von $\psi$ gegeben
+        \item \textbf{Model vom unendlichen Potentialtopf anwendbar}  
+    \end{enumerate}
+    \item harmonischer Oszillator ($V=\frac{1}{2}m\omega^2x^2$):
+    \begin{enumerate}
+        \item prinzipiell (mit Quantenzahl $n$):\\
+        $\psi_n(x)=$ Normierung * (Polynom in x) * (Gauß-Funktion)\\
+        $\rightarrow$ $\psi_n(x)=N_n\cdot H_n(x) \cdot e^{-0.5x^2}$
+        \item $E_n=\hbar\omega(n+\frac{1}{2})$ mit $n=0,1,2,...$
+        \item $E\psi=\hbar\omega(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi$
+        \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
+        verringern/erhöhen die Energien in diskrete Schritte: \\ die Lösungen davon sind die Hermite-Funktionen
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
