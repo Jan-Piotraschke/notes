@@ -7,7 +7,6 @@
     irgendwo ein $e^-$  anzutreffen, wenn man es experimentell misst
     \item durch Messung \textit{kollabiert} $\psi$ zu einem Peak am gemessenen Wert 
     \item es gilt die Heisenberg'sche Unschärferelation $\sigma_x\sigma_p\geq\frac{\hbar}{2}$ (siehe \ref{Varianz})
-    \item \textbf{?} es gibt diskrete Energien aber kontinuierliche Orte 
 \end{enumerate}
 
 \subsection{Bedingungen aus der Statistik:}
@@ -34,6 +33,7 @@
         \item auch geschrieben als $\hat{H}\psi=E\psi$
     \end{enumerate}
 \end{enumerate}
+\newpage
 
 \subsection{Modellsysteme für die Form des Potentials $V$:}
 \begin{enumerate}
@@ -44,18 +44,38 @@
         $\rightarrow$ $\psi =Ae^{i(kx-\omega t)}$ mit $\omega=\frac{E}{\hbar}$
         \item die Geschwindigkeit ist durch die Gruppengeschwindigkeit $v_g=\frac{\hbar k}{m}=\frac{d}{dk}\omega$ und \underline{nicht}
         durch die Phasengeschwindigkeit von $\psi$ gegeben
-        \item \textbf{Model vom unendlichen Potentialtopf anwendbar}  
+        \item \textbf{Model vom unendlichen Potentialtopf anwendbar}
     \end{enumerate}
+    \item unendlicher Potentialtopf ($V(x)=0$ für $0\leq x\leq L$, sonst $V(x)=\infty$)
+        \begin{enumerate}
+            \item $\psi(x)=A\sin(\frac{n\pi x}{L})$
+            \item $E_n=\frac{n^2 \pi^2 \hbar^2}{2mL^2}$ mit $L$: Länge des Topfes 
+            \item \textbf{Anwendung} in der Berechnung von Absorptionsenergien ($\Delta E$: HOMO $\rightarrow$ LUMO) bei Molekülorbitalen 
+        \end{enumerate} 
     \item harmonischer Oszillator ($V=\frac{1}{2}m\omega^2x^2$):
     \begin{enumerate}
-        \item prinzipiell (mit Quantenzahl $n$):\\
-        $\psi_n(x)=$ Normierung * (Polynom in x) * (Gauß-Funktion)\\
-        $\rightarrow$ $\psi_n(x)=N_n\cdot H_n(x) \cdot e^{-0.5x^2}$
         \item $E_n=\hbar\omega(n+\frac{1}{2})$ mit $n=0,1,2,...$
-        \item $E\psi=\hbar\omega(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi$
-        \item Leiteroperatoren $\hat{a}_\pm$ sind Lösungsansätze der Schrödinger-Gleichung und 
-        verringern/erhöhen die Energien in diskrete Schritte: \\ die Lösungen davon sind die Hermite-Funktionen
+        \item 2 Lösungsansätze (mit Quantenzahl $n$):
+        \begin{enumerate}
+            \item $\psi_n(x)=$ Normierung * (Polynom in x) * (Gauß-Funktion)\\
+            $\rightarrow$ $\psi_n(x)=A_n\cdot H_n(x) \cdot e^{-0.5x^2}$ \\
+            die Lösungen davon sind die Hermite-Polynom $H_n(x)$, die man nachschlagen kann
+            \item Leiteroperatoren $\hat{a}_\pm$ verringern/erhöhen die Energien einer bekannten Lösung in diskrete Schritte:\\
+            $\hat{H}\psi=\hbar \omega(\hat{a}_\pm \hat{a}_\mp \pm 0.5)\psi=E\psi$ , mit $\hat{a}_\pm=\frac{1}{\sqrt{2\hbar m \omega}}(\mp i\hat{p}+m \omega\hat{x})$ \\
+            \underline{Hinweise}:
+            \begin{enumerate}
+                \item $\hat{a}_\pm$ wird direkt auf $\psi$ angewendet 
+                \item $\hat{a}_- \psi_0=0$, da man vom untersten Energieniveau nicht 'absteigen' kann
+            \end{enumerate} 
+            $\rightarrow$ $\psi_n(x)=A_n\cdot (\hat{a}_+)^n \cdot \psi_0(x)$
+        \end{enumerate}
+
     \end{enumerate}
+    \item Potentialstufe ($V(x)=V_0$ für $0\leq x$, sonst $V(x)=0$)
+    \begin{enumerate}
+        \item Fallunterscheidung, ob $E>V_0$ oder $E<V_0$
+    \end{enumerate}
+    \item Potentialbarriere ($V(x)=V_0$ für $-a\leq x \leq +a$, sonst $V(x)=0$; mit Breite $2a$) \label{Potentialbarriere}
 \end{enumerate}
 
 
