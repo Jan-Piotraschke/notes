@@ -1,0 +1,85 @@
+\section{Die statistische Quantenwelle $\psi$}
+
+\subsection{zum Verständnis:}
+\begin{enumerate}
+    \item die Wahrscheinlickeitsaussagen sind die Lösung der Schrödinger-Gleichung (\ref{schroedinger})
+    \item ein $e^-$ hat in einem Atom keine Flugbahn. $\psi$ der $e^-$ sagt nur wie wahrscheinlich es ist,
+    irgendwo ein $e^-$  anzutreffen, wenn man es experimentell misst
+    \item durch Messung \textit{kollabiert} $\psi$ zu einem Peak am gemessenen Wert 
+    \item es gilt die Heisenberg'sche Unschärferelation $\sigma_x\sigma_p\geq\frac{\hbar}{2}$ (siehe \ref{Varianz})
+\end{enumerate}
+
+\subsection{Bedingungen aus der Statistik:}
+\begin{enumerate}
+    \item allgemein: $\braket{\psi_m|\psi_n}=\int \psi_m^*\psi_n \,dr=\int_{-\infty}^{\infty}\rho(r)\,dr=\delta_{mn}$ 
+    mit Wahrscheinlichkeitsdichte $\rho(r,t)=|\psi(r,t)|^2$
+    \item da $\int_{-\infty}^{\infty} \rho(r) \,dr=1$ muss $\psi$ normiert sein, damit 
+    das Teilchen nicht zu einer Wahrscheinlichkeit ungleich 100 $\%$ im ganzen Raum vorfindbar ist \label{normiert}
+    \item Erwartungswert/Mittelwert $\bar{A}\equiv\braket{A}=\braket{\psi|\hat{A}\psi}=\int_{-\infty}^{\infty}\hat{A}\rho(r)\,dr$
+    \item Varianz $\sigma^2=\braket{A^2}-\braket{A}^2$ \label{Varianz}
+\end{enumerate}
+
+\subsection{Schrödinger-Gleichung:}\label{schroedinger}
+\begin{enumerate}
+    \item die Schrödinger-Gleichung hängt nur von zwei Funktionen ab: $\psi$ und Potential $V$\\
+    $\rightarrow$ \textbf{Hinweis:} Auswahl Koordinatensystem durch $\Delta$ 
+    \item (allg.) zeitabhängige: $i\hbar\frac{\partial\psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m} \Delta \psi\left(x,t\right)+V\cdot\psi\left(x,t\right)=\hat{H}\psi\left(x,t\right)$
+    \begin{enumerate}
+        \item \textbf{Separationsansatz} (um Funktionen aufzuteilen): $\psi(x,t)=\varphi(x)\cdot f(t)$
+    \end{enumerate}
+
+
+    \item zeitunabhängige: $-\frac{\hbar^{2}}{2m}\Delta\psi\left(x\right)+V(x)\cdot\psi\left(x\right)=E\psi\left(x\right)$ 
+    \begin{enumerate}
+        \item auch geschrieben als $\hat{H}\psi=E\psi$
+    \end{enumerate}
+\end{enumerate}
+\newpage
+
+\subsection{Modellsysteme für die Form des Potentials $V$:}
+\begin{enumerate}
+    \item freies Teilchen (d.h. $V=0$):
+    \begin{enumerate}
+        \item zeitabhängiges Teilchen ist eine ebene Welle (siehe: \ref{Wellenpackete}) ($\psi$ kann zum Zeitpunkt $t=0$ 'lokalisiert'  
+        und dort \textbf{normiert} werden) \\
+        $\rightarrow$ $\psi =Ae^{i(kx-\omega t)}$ mit $\omega=\frac{E}{\hbar}$
+        \item die Geschwindigkeit ist durch die Gruppengeschwindigkeit $v_g=\frac{\hbar k}{m}=\frac{d}{dk}\omega$ und \underline{nicht}
+        durch die Phasengeschwindigkeit von $\psi$ gegeben
+        \item \textbf{Model vom unendlichen Potentialtopf anwendbar}
+    \end{enumerate}
+    \item unendlicher Potentialtopf ($V(x)=0$ für $0\leq x\leq L$, sonst $V(x)=\infty$)
+        \begin{enumerate}
+            \item $\psi(x)=A\sin(\frac{n\pi x}{L})$
+            \item $E_n=\frac{n^2 \pi^2 \hbar^2}{2mL^2}$ mit $L$: Länge des Topfes 
+            \item \textbf{Anwendung} in der Berechnung von Absorptionsenergien ($\Delta E$: HOMO $\rightarrow$ LUMO) bei Molekülorbitalen 
+        \end{enumerate} 
+    \item harmonischer Oszillator ($V=\frac{1}{2}m\omega^2x^2$; mit der Eigenfrequenz $\omega$):
+    \begin{enumerate}
+        \item $E_n=\hbar\omega(n+\frac{1}{2})$ mit $n=0,1,2,...$
+        \item 2 Lösungsansätze (mit Quantenzahl $n$):
+        \begin{enumerate}
+            \item $\psi_n(x)=$ Normierung * (Polynom in x) * (Gauß-Funktion)\\
+            $\rightarrow$ $\psi_n(x)=A_n\cdot H_n(x) \cdot e^{-0.5x^2}$ \\
+            die Lösungen davon sind die Hermite-Polynom $H_n(x)$, die man nachschlagen kann
+            \item Leiteroperatoren $\hat{a}_\pm$ verringern/erhöhen die Energien einer bekannten Lösung in diskrete Schritte:\\
+            $\hat{H}\psi=\hbar \omega(\hat{a}_\pm \hat{a}_\mp \pm 0.5)\psi=E\psi$ , mit $\hat{a}_\pm=\frac{1}{\sqrt{2\hbar m \omega}}(\mp i\hat{p}+m \omega\hat{x})$ \\
+            \underline{Hinweise}:
+            \begin{enumerate}
+                \item $\hat{a}_\pm$ wird direkt auf $\psi$ angewendet 
+                \item $\hat{a}_- \psi_0=0$, da man vom untersten Energieniveau nicht 'absteigen' kann
+            \end{enumerate} 
+            $\rightarrow$ $\psi_n(x)=A_n\cdot (\hat{a}_+)^n \cdot \psi_0(x)$
+        \end{enumerate}
+
+    \end{enumerate}
+    \item Potentialstufe ($V(x)=V_0$ für $0\leq x$, sonst $V(x)=0$)
+    \begin{enumerate}
+        \item Fallunterscheidung, ob $E>V_0$ oder $E<V_0$
+    \end{enumerate}
+    \item Potentialbarriere ($V(x)=V_0$ für $-a\leq x \leq +a$, sonst $V(x)=0$; mit Breite $2a$) \label{Potentialbarriere}
+\end{enumerate}
+
+
+
+
+\newpage
